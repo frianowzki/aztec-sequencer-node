@@ -107,9 +107,9 @@ Now head back to `operator | start-here` and run `/operator start` command.
 
 ~ Change `address` with your Sequencer Node EVM address.
 
-~ Change `block-number` with block number you got above.
+~ Change `block-number` with BLOCK_NUMBER you got above.
 
-~ Change `proof` with proof you got above.
+~ Change `proof` with PROOF you got above.
 
 ### Congratulations, now you have Apprentice role!
 
