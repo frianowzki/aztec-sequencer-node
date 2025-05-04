@@ -57,7 +57,6 @@ aztec start --node --archiver --sequencer \
   --sequencer.validatorPrivateKey 0xPrivateKey \
   --sequencer.coinbase 0xPublicAddress \
   --p2p.p2pIp IP
-  --fee-per-l2-gas=25000000
 ```
 ~ Change `RPC_URL` with RPC from [Alchemy](https://dashboard.alchemy.com/) or [Ankr](https://www.ankr.com/rpc/). (Choose Ethereum Sepolia Network)
 
