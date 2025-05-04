@@ -16,8 +16,8 @@ sudo apt install curl iptables build-essential git wget lz4 jq make gcc nano aut
 ```
 source <(wget -O - https://raw.githubusercontent.com/frianowzki/installer/main/docker.sh)
 ```
-sudo groupadd docker && sudo usermod -aG docker $(whoami) && newgrp docker
 ```
+sudo groupadd docker && sudo usermod -aG docker $(whoami) && newgrp docker
 ```
 ## - Install Aztec:
 ```
