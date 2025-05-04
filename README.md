@@ -145,8 +145,14 @@ If it successfully registered you can check it from `operator | start-here` and 
 `proof too old`
 ### or 
 `world-state:block_stream Error processing block stream: Error: Obtained L1 to L2 messages failed to be hashed to the block inHash`
-### run this and start again the node from the start:
+### run this and follow the steps from the start:
 
+```
+docker ps -a
+```
+```
+docker stop [aztec-container-ID]
+```
 ```
 rm -r /root/.aztec/alpha-testnet
 ```
