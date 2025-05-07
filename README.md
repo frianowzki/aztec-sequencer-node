@@ -1,6 +1,8 @@
-# How to Run Aztec Sequencer Node
+# How to Run Aztec Sequencer Node 
 #
 ![aztec-logo](https://github.com/user-attachments/assets/b0b56462-dbcf-4afc-8ff9-c9dc000b71f2)
+#
+### Latest image - aztecprotocol:aztec/alpha-testnet-8
 #
 ## Hardware requirements to run Sequencer:
 - Machine: 8-Core CPU; 16 GiB RAM; 1 TB NVMe SSD
@@ -144,7 +146,14 @@ If it successfully registered you can check it from `operator | start-here` and 
 `proof too old`
 ### or 
 `world-state:block_stream Error processing block stream: Error: Obtained L1 to L2 messages failed to be hashed to the block inHash`
-### run this and follow the steps from the start:
+
+#### 1 - Make sure to have a working Beacon RPC
+
+You can add one from [Chainstack](https://console.chainstack.com)
+
+Sign up/login > create a project > select Ethereum - Sepolia > deploy node > choose global deploment region > look for the URL and paste on `CONSENSUS_HOST_URL`
+
+### 2 - Run this and follow the steps from the start:
 
 ```
 docker ps -a
@@ -155,3 +164,41 @@ docker stop [aztec-container-ID]
 ```
 rm -r /root/.aztec/alpha-testnet
 ```
+#
+
+## - Update Sequencer Node:
+
+```
+docker ps -a
+```
+```
+docker stop [aztec-container-id]
+```
+```
+rm -rf .aztec/alpha-testnet/data
+```
+```
+aztec-up alpha-testnet
+```
+```
+aztec start --node --archiver --sequencer \
+  --network alpha-testnet \
+  --l1-rpc-urls RPC_URL  \
+  --l1-consensus-host-urls CONSENSUS_HOST_URL \
+  --sequencer.validatorPrivateKey 0xPrivateKey \
+  --sequencer.coinbase 0xPublicAddress \
+  --p2p.p2pIp IP
+```
+After that wait until it fully synced and you can close the terminal.
+#
+#
+## - Check Your Peer ID:
+
+```
+sudo docker logs $(docker ps -q --filter ancestor=aztecprotocol/aztec:latest | head -n 1) 2>&1 | grep -i "peerId" | grep -o '"peerId":"[^"]*"' | cut -d'"' -f4 | head -n 1
+```
+If it gives you error you can replace `aztecprotocol/aztec:latest` with your Aztec docker image from 
+```
+docker ps -a
+```
+Then open [Node Explorers](https://aztec.nethermind.io/) and search your ID.
