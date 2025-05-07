@@ -142,7 +142,9 @@ If it successfully registered you can check it from `operator | start-here` and 
 #
 #
 #
-### If you see an errors like:
+## - Errors:
+#
+#### If you see an errors like:
 `proof too old`
 ### or 
 `world-state:block_stream Error processing block stream: Error: Obtained L1 to L2 messages failed to be hashed to the block inHash`
@@ -153,7 +155,7 @@ You can add one from [Chainstack](https://console.chainstack.com)
 
 Sign up/login > create a project > select Ethereum - Sepolia > deploy node > choose global deploment region > look for the URL and paste on `CONSENSUS_HOST_URL`
 
-### 2 - Run this and follow the steps from the start:
+#### 2 - Run this and follow the steps from the start:
 
 ```
 docker ps -a
