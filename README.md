@@ -137,7 +137,8 @@ aztec add-l1-validator \
 #
 ### Hit enter and wait for it. 
 
-If it successfully registered you can check it from `operator | start-here` and use the command `operator my-stats`. 
+If it successfully registered you can check it from `operator | start-here` and use the command `/operator my-stats` and enter your validator address. 
+##### NOTE: Currently there is a daily registration quota each day, if you missed it now you can try tomorrow.
 
 #
 #
