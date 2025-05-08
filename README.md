@@ -58,7 +58,7 @@ aztec start --node --archiver --sequencer \
   --l1-consensus-host-urls CONSENSUS_HOST_URL \
   --sequencer.validatorPrivateKey 0xPrivateKey \
   --sequencer.coinbase 0xPublicAddress \
-  --p2p.p2pIp IP
+  --p2p.p2pIp IP \
   --p2p.maxTxPoolSize 1000000000
 ```
 ~ Change `RPC_URL` with RPC from [Alchemy](https://dashboard.alchemy.com/) or [Ankr](https://www.ankr.com/rpc/). (Choose Ethereum Sepolia Network)
