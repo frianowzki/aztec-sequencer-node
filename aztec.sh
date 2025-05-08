@@ -11,7 +11,7 @@ echo "-----------------------------------------------------"
 echo ""
 
 # ====================================================
-# Aztec alpha-testnet-8 sequencer node
+# Aztec alpha-testnet-8 Sequencer Node
 # Version: v0.85.0-alpha-testnet.8
 # For Ubuntu/Debian only, requires sudo privileges
 # ====================================================
